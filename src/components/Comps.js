@@ -98,14 +98,14 @@ const TabButton = ({ label, active, onClick }) => (
 );
 
 const envelopes = [
-    { id: "sad", emoji: "🌧️", label: "Open when sad", bow: C.plum, seal: C.plum, sealEmoji: "🌙" },
-    { id: "stressed", emoji: "🍵", label: "Open when stressed", bow: C.maroon, seal: C.maroon, sealEmoji: "🌿" },
-    { id: "missing", emoji: "💌", label: "Open when you miss me", bow: C.ribbon, seal: C.ribbon, sealEmoji: "💕" },
-    { id: "happy", emoji: "🌸", label: "Open when happy", bow: C.rose, seal: C.rose, sealEmoji: "🌷" },
-    { id: "sleep", emoji: "🌙", label: "Open when you can't sleep", bow: C.plum, seal: "#5a3070", sealEmoji: "✨" },
-    { id: "proud", emoji: "🏆", label: "Open when you did great", bow: C.gold, seal: C.gold, sealEmoji: "⭐" },
-    { id: "laugh", emoji: "🎀", label: "Open when you need a laugh", bow: C.rose, seal: C.rose, sealEmoji: "🎀" },
-    { id: "doubt", emoji: "🕯️", label: "Open when you doubt yourself", bow: C.maroon, seal: C.maroon, sealEmoji: "🕯️" },
+    { id: "sad", emoji: "🌧️", label: "Open when sad", bow: C.plum, seal: C.plum, sealEmoji: "🌙", song: { title: "Better With You", artist: "Jesse Barrera", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "stressed", emoji: "🍵", label: "Open when stressed", bow: C.maroon, seal: C.maroon, sealEmoji: "🌿", song: { title: "Call You Mine", artist: "Jeff Bernat", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "missing", emoji: "💌", label: "Open when you miss me", bow: C.ribbon, seal: C.ribbon, sealEmoji: "💕", song: { title: "You're The Reason", artist: "Jesse Barrera", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "happy", emoji: "🌸", label: "Open when happy", bow: C.rose, seal: C.rose, sealEmoji: "🌷", song: { title: "If You're Not The One", artist: "Jeff Bernat", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "sleep", emoji: "🌙", label: "Open when you can't sleep", bow: C.plum, seal: "#5a3070", sealEmoji: "✨", song: { title: "Stay With Me", artist: "Jeremy Passion", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "proud", emoji: "🏆", label: "Open when you did great", bow: C.gold, seal: C.gold, sealEmoji: "⭐", song: { title: "Extraordinary", artist: "Mac Eyre", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "laugh", emoji: "🎀", label: "Open when you need a laugh", bow: C.rose, seal: C.rose, sealEmoji: "🎀", song: { title: "Girl Next Door", artist: "Jesse Barrera", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "doubt", emoji: "🕯️", label: "Open when you doubt yourself", bow: C.maroon, seal: C.maroon, sealEmoji: "🕯️", song: { title: "Lemonade Mouth", artist: "Jeremy Passion", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
 ];
 
 const EnvelopeCard = ({ env, index, onClick }) => {
@@ -309,7 +309,9 @@ const AllAboutHer = () => {
 
 const LetterModal = ({ env, onClose }) => {
     const [phase, setPhase] = useState("sealed");
-    const [likeCount] = useState(0);
+    const [likeCount, setLikeCount] = useState(() =>
+        parseInt(localStorage.getItem(`likeCount-${env.id}`) || '0', 10)
+    );
     const [confettiPieces, setConfettiPieces] = useState([]);
 
     useEffect(() => {
@@ -424,12 +426,33 @@ const LetterModal = ({ env, onClose }) => {
                             </div>
                         </div>
 
+                        {/* now playing */}
+                        <div style={{
+                            marginTop: 24,
+                            borderRadius: 12,
+                            overflow: "hidden",
+                            border: `1px solid ${C.rosePale}`,
+                        }}>
+                            <iframe
+                                src={`https://open.spotify.com/embed/track/${env.song.url.split("/track/")[1]}?utm_source=generator&theme=0&autoplay=1`}
+                                width="100%"
+                                height="80"
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                                style={{ border: "none", display: "block" }}
+                                title={env.song.title}
+                            />
+                        </div>
+
                         {/* like */}
                         <div style={{ marginTop: 20, display: "flex", justifyContent: "center", gap: 8, alignItems: "center" }}>
                             <button
                                 onClick={() => {
+                                    const newCount = likeCount + 1;
                                     setLiked(true);
+                                    setLikeCount(newCount);
                                     localStorage.setItem(`liked-${env.id}`, '1');
+                                    localStorage.setItem(`likeCount-${env.id}`, String(newCount));
                                 }}
                                 style={{
                                     background: "none", border: `1px solid ${liked ? C.rose : C.paperLine}`,
@@ -443,10 +466,10 @@ const LetterModal = ({ env, onClose }) => {
                                 }}
                             >
                                 <span style={{ fontSize: 16 }}>{liked ? "♥" : "🤍"}</span>
-                                {/* <span>{liked ? likeCount : likeCount}</span> */}
+                                <span>{liked ? likeCount : likeCount}</span>
                             </button>
                             <span style={{ fontSize: 11, color: C.inkLight, fontFamily: "'Lato',sans-serif", fontStyle: "italic" }}>
-                                {liked ? "saved to my heart 🌷" : "press if this helped"}
+                                {liked ? `saved to my heart 🌷` : "press if this helped"}
                             </span>
                         </div>
                     </div>
@@ -476,7 +499,7 @@ const LetterModal = ({ env, onClose }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
@@ -641,7 +664,7 @@ const PROMPT = "do u still...?"
 
 const TAP_MESSAGES = [
     "yes. always.",
-    "ofc, but have you eaten today though",
+    "ofc, but have you eaten today tho",
     "still you. it's always you.",
     "yes, and i'm not even joking. you're my favourite person.",
     "yes and you don't have to do anything to deserve it.",
