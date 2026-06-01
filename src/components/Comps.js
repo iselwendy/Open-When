@@ -98,11 +98,11 @@ const TabButton = ({ label, active, onClick }) => (
 );
 
 const envelopes = [
-    { id: "sad", emoji: "🌧️", label: "Open when sad", bow: C.plum, seal: C.plum, sealEmoji: "🌙", song: { title: "Better With You", artist: "Jesse Barrera", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
-    { id: "stressed", emoji: "🍵", label: "Open when stressed", bow: C.maroon, seal: C.maroon, sealEmoji: "🌿", song: { title: "Call You Mine", artist: "Jeff Bernat", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
-    { id: "missing", emoji: "💌", label: "Open when you miss me", bow: C.ribbon, seal: C.ribbon, sealEmoji: "💕", song: { title: "You're The Reason", artist: "Jesse Barrera", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
-    { id: "happy", emoji: "🌸", label: "Open when happy", bow: C.rose, seal: C.rose, sealEmoji: "🌷", song: { title: "If You're Not The One", artist: "Jeff Bernat", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
-    { id: "sleep", emoji: "🌙", label: "Open when you can't sleep", bow: C.plum, seal: "#5a3070", sealEmoji: "✨", song: { title: "Stay With Me", artist: "Jeremy Passion", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
+    { id: "sad", emoji: "🌧️", label: "Open when sad", bow: C.plum, seal: C.plum, sealEmoji: "🌙", song: { title: "Lemonade", artist: "Jeremy Passion", url: "https://open.spotify.com/track/6Jt96y5MkmIH0b3B8t9IbX?si=53b9b0a341da4a2e" } },
+    { id: "stressed", emoji: "🍵", label: "Open when stressed", bow: C.maroon, seal: C.maroon, sealEmoji: "🌿", song: { title: "Call You Mine", artist: "Jeff Bernat", url: "https://open.spotify.com/track/4m5HKGwULoA0SvhaXiDMPR?si=6f4a43fc74ae41f0" } },
+    { id: "missing", emoji: "💌", label: "Open when you miss me", bow: C.ribbon, seal: C.ribbon, sealEmoji: "💕", song: { title: "Home", artist: "Luke Chiang", url: "https://open.spotify.com/track/7ut2M0v822jWa5EwXZWLem?si=4d226d658ff14f73" } },
+    { id: "happy", emoji: "🌸", label: "Open when happy", bow: C.rose, seal: C.rose, sealEmoji: "🌷", song: { title: "Easy", artist: "Mac Ayres", url: "https://open.spotify.com/track/58dSdjfEYNSxte1aNVxuNf?si=58da0094a4e74e8e" } },
+    { id: "sleep", emoji: "🌙", label: "Open when you can't sleep", bow: C.plum, seal: "#5a3070", sealEmoji: "✨", song: { title: "Slow Down", artist: "Mac Ayres", url: "https://open.spotify.com/track/3XstzgzP0rp3bzElEnRVHv?si=793e5b8adb9c4415" } },
     { id: "proud", emoji: "🏆", label: "Open when you did great", bow: C.gold, seal: C.gold, sealEmoji: "⭐", song: { title: "Extraordinary", artist: "Mac Eyre", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
     { id: "laugh", emoji: "🎀", label: "Open when you need a laugh", bow: C.rose, seal: C.rose, sealEmoji: "🎀", song: { title: "Girl Next Door", artist: "Jesse Barrera", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },
     { id: "doubt", emoji: "🕯️", label: "Open when you doubt yourself", bow: C.maroon, seal: C.maroon, sealEmoji: "🕯️", song: { title: "Lemonade Mouth", artist: "Jeremy Passion", url: "https://open.spotify.com/track/5rZQUcZVDCCUsJHeaxVPpG?si=7e706dc7d9e54aa0" } },

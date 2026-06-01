@@ -37,100 +37,116 @@ const HER = {
 export const messages = {
 
     sad:
-        `Hey, ${HER.herNickname}.
+        `today feels a little heavy, no? that's okay. 
 
-I know right now feels heavy — like today forgot to be kind to you. Maybe something happened, maybe nothing did and it still hurts. Both of those are real, and both of them matter.
+you don't have to hold everything together right now. you don't have to pretend you're okay for everyone. if u need to cry, then cry. if you need to rest, then rest. whatever you're feeling right now is real. whatever's hurting you right now, i'm not gonna tell you it's nothing. if it hurts, then it hurts. and that's enough reason to be gentle with yourself.
 
-I want you to know: you are not alone in this. Not even a little bit.
+gusto ko lang malaman mo na even on your saddest days, even though you don't always see it, you're one of the strongest people i know. it's how you keep going even when things get difficult.
 
-I've watched you carry so much — ${HER.currentStruggle} — and you do it with so much grace it takes my breath away sometimes. But on the days you can't carry anything at all, that's okay too. You don't have to be strong all the time. Not with me. Not today.
+at please, wag na wag mong iisipin na you have to hide the vulnerable parts of yourself from me. i love every version of you, the happy you, the goofy you, the tired you, the sad you, and the vulnerable you too.
 
-When it feels like too much: make yourself a ${HER.favDrink}. Wrap up in ${HER.comfortItem}. Put on ${HER.favShow} or something that asks nothing of you. Let ${HER.petName} sit with you if they will.
+you don't have to carry everything alone.
 
-${HER.thingYouLove5} — that's part of who you are. The world is lucky for it, even on the days it doesn't feel that way.
+dito lang ako. always.
 
-I love every version of you. The bright one, the determined one, and yes — this one too. The one with the tired eyes and the full heart.
-
-Breathe. I've got you. 🩷
-
-All my love —
-${HER.myName}`,
+i love you.`,
 
     stressed:
-        `Pause. Just for one second.
+        `pause. just for a second.
 
-In for 4... hold for 4... out for 4.
+    in for 4... hold for 4... out for 4.
 
-Okay. Hi. It's me.
+    okay. hi, baby. it's me.
 
-${HER.herNickname}, you are not behind. You are not failing. You're someone doing hard things — and hard things take time and take something out of you. That's not weakness, that's just how it works.
+    if you're reading this, then i'm guessing you're stressed right now.
 
-Here's what I know about you that you sometimes forget: remember ${HER.proudThing}? You showed up for that, even when it felt impossible. You have done hard things before. You will do this one too.
+    if you've been staring at the same thing for the past ten minutes, maybe look away for a second too.
 
-Right now, though — step away from whatever it is. Even five minutes. Make a ${HER.favDrink}. Eat something (${HER.favFood} if you can 🍽️). Stretch. Open the window. Let the outside in for a moment.
+    i know you've got a lot on your plate right now. maybe more than you'd like to admit, and i know you probably feel like you're running out of time, or that you're not doing enough.
 
-The work will still be there. The deadline will still be there. But right now, *you* need to still be there too — rested and breathing and okay.
+    but baby, you are doing more than you give yourself credit for.
 
-One thing. Then the next thing. That's all.
+    you don't have to have everything figured out today. you don't have to finish everything right this second. one thing at a time, okay?
 
-I believe in you more than you believe in you right now. Borrow some of mine.
+    i know, sobrang overwhelming ng mga bagay-bagay sometimes, but i believe in you. i believe in your efforts. that's why i also believe that you'll get through this too.
 
-${HER.myName} 💪🩷`,
+    be patient with yourself.
+
+    take a break if kailangan mo. drink some water. stretch. talk to me if u want. then come back to it when you're ready.
+
+    no matter how stressful today gets, i'm still gonna be here cheering for you from the sidelines.
+
+    you've got this.
+
+    i love you.`,
 
     missing:
-        `I miss you too, ${HER.nickname}.
+        `hey,
 
-Right now, wherever I am — I'm probably thinking about you. About ${HER.cuteHabit}. About ${HER.thingYouLove2}. About the way you sound when you're excited about something small and your voice goes faster and your hands start moving.
+    if you're reading this, then i'm guessing you miss me.
 
-I think about ${HER.howYouMet} — I had no idea then that you'd become my favourite part of everything. And our first date at ${HER.firstDate}. And ${HER.favouriteMemory}. I keep all of those somewhere safe in my chest.
+    guess what? i miss you too.
 
-${HER.ourPlace} holds a version of us in it that I want to go back to again and again.
+    right now, i'm probably thinking about you.
 
-Put on ${HER.ourSong}. That one's always ours, no matter the distance. No matter the time.
+    i keep thinking about that afternoon sa c4.
 
-We'll have so many more moments. ${HER.yourDream} — I'm still holding onto that. ${HER.yourDream2} too. We have so many things still ahead of us.
+    yung kaba ko lmao. but especially, i keep thinking about how nice it felt to finally hold your hand. how safe i felt with you beside me. how laying my head on your shoulder felt like i could finally relax for a bit.
 
-Until then — here's a little piece of me in your pocket.
+    that's one of my favorite memories of us.
 
-You're never as far from me as it feels. 🫂
+    sometimes i replay it in my head when i miss you.
 
-${HER.myName}`,
+    and i know being apart can feel a little difficult sometimes. i know there are days when i wish i could just be there with you instead of writing this letter.
+
+    but we'll see each other again.
+
+    we still have so many places to go, so many conversations to have, so many random memories waiting for us.
+
+    for now, put on Home by Luke Chiang.
+
+    close your eyes for a second and think of me.
+
+    i'm doing the same.
+
+    and until i get to see you again, here's this little piece of me to keep you company.
+
+    you're never as far away as it feels, okay?
+
+    every day apart just makes me look forward to the next time i get to hold your hand again.
+
+    i'm counting down too.
+
+    i love you.
+    `,
 
     happy:
-        `WAIT. STOP. LET ME SEE YOU. 🎉
+        `someone's happy lmao
 
-${HER.nickname}!!! You're happy!!! Tell me everything, I need every detail right now.
+        you must tell me everything, i need every detail right now 😝
 
-Look at you. You deserve every single good thing that finds you — every last bit of it. ${HER.thingYouLove1}, ${HER.thingYouLove4} — these are the things that the world gives back to you. You put good in. Good comes back.
+        but look at you. you deserve every single good thing that finds you. 
 
-Take a mental screenshot of this exact feeling and store it somewhere safe. Because on the harder days, this version of you is still in there. She doesn't go anywhere.
+        take a mental screenshot of this exact feeling and store it somewhere safe. because on the harder days, this version of you is still in there. she doesn't go anywhere.
 
-Also — I have to say it — ${HER.insideJoke1}. Just needed to drop that in because I knew it would make you smile even more. 😌
-
-And you know what this calls for? ${HER.favFood}. ${HER.favArtist} on full volume. Dancing alone in your room if the mood strikes. You have full permission.
-
-Here's to more of these. So many more. The world made the right call giving them to you.
-
-🥂🩷 ${HER.myName}`,
+        here's to more of these. so many more. the world made the right call giving them to you.`,
 
     sleep:
-        `Hi, midnight brain. We meet again.
+        `can't sleep? 
 
-I know what it's like in there right now — the thoughts are too loud and the ceiling is too close and sleep feels like something that happens to other people.
+    i know what it's like in there right now. thoughts are too loud, ceiling is too close, sleep feels like something that happens to other people.
 
-So instead of trying to think your way to sleep, let's just think about one good thing. It can be tiny. The smell of ${HER.favDrink}. The next episode of ${HER.favShow} waiting for you tomorrow. ${HER.petName} being warm and soft somewhere nearby. The way ${HER.favSeason} feels on your face.
+    instead of trying to think your way to sleep, let's just think about one good thing. it can be tiny. the smell of tapsihan. the way the water felt when you took a bath. the way the winds feels on your face. or bangs being warm and soft somewhere.
 
-You don't have to solve anything tonight, ${HER.nickname}. Not ${HER.currentStruggle}, not ${HER.bigGoal}, not whatever your brain is looping through right now. Tonight is not for that. Tonight is for rest.
+    the biggest question in the universe isn't yours to solve, not tonight, not ever. 
 
-And here's what I notice: ${HER.sleepyTell}. When that starts — that's your body asking. Listen to it. You're allowed to listen.
+    tonight is for rest.
 
-You are safe. You are so loved. Morning is already on its way to you.
+    you are safe. you are so loved. morning is already on its way to you.
 
-Close your eyes. Put on ${HER.goToPlaylist}. Let it carry you somewhere quieter.
+    close your eyes. do whatever helps you sleep (except overthink lmao). let it carry you somewhere quieter.
 
-I'll be here when you wake up. 🌙✨
-
-— ${HER.myName}`,
+    i'll be here when you wake up. 🌙✨`,
 
     proud:
         `OKAY. WAIT. YOU DID THAT?!
