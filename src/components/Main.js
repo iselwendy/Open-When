@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Main.css';
-import { FloatingPetals, CursorTrail, BowSVG, RibbonDividerSVG, TabButton, envelopes, EnvelopeCard, StarDust, FloralCornerSVG, LaceBorderSVG, Fact, Pill, AllAboutHer, LetterModal, WaxSealSVG, Section, WelcomeModal } from './Comps';
-import { C, HER, messages } from './Data';
+import { FloatingPetals, CursorTrail, BowSVG, RibbonDividerSVG, TabButton, envelopes, EnvelopeCard, AllAboutHer, LetterModal, WelcomeModal } from './Comps';
+import { C, HER } from './Data';
 
 function Main() {
     const [opened, setOpened] = useState(null);
